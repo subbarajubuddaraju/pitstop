@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/runner/work/pitstop/pitstop/scripts/build_food_tiles.py", line 153, in <module>
+    main(sys.argv[1:] or list(METROS))
+  File "/home/runner/work/pitstop/pitstop/scripts/build_food_tiles.py", line 134, in main
+    found = objects_by_metro(metros, expr)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/pitstop/pitstop/scripts/build_food_tiles.py", line 118, in objects_by_metro
+    for obj in osm_extract.region_objects([region], expr, "amenity"):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/pitstop/pitstop/scripts/osm_extract.py", line 61, in region_objects
+    src = download(region, folder)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/pitstop/pitstop/scripts/osm_extract.py", line 22, in download
+    r.raise_for_status()
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://download.geofabrik.de/us/arizona/arizona-latest.osm.pbf
